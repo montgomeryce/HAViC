@@ -1,0 +1,34 @@
+<h2>My Activities </h2>
+<table class="trainingDataTable">
+    <thead>
+    <tr>
+        <td>Date</td>
+        <td>Name</td>
+        <td>ActivityType</td>
+        <td title="Total time in ?">Time</td>
+        <td title="Total distance in miles">Distance</td>
+        <td title="Total calories">Calories</td>
+        <td></td>
+        <td></td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let activity of activities">
+        <td>{{activity.date}}</td>
+        <td>{{activity.name}}</td>
+        <td>{{activity.type}}</td>
+        <td>{{activity.totalTime }}</td>
+        <!-- <td>{{activity.totalDistance | metersToMiles| number:'.0-2'}}</td> -->
+        <td>{{activity.totalDistance | number:'.0-2'}}</td>
+        <td>{{activity.totalCalories | number:'.0-0'}}</td>
+        <td><button (click)="onSelect(activity.id)">Table</button></td>
+        <td>
+            <button (click)="onSelectLine(activity.id)">Chart</button>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<button (click)="prevPage(page.number)">Prev</button>
+<button (click)="nextPage(page.number)">Next</button>
+<!--
+<button *ngIf="page.totalPages>1 && page.number < page.totalPages" (click)="nextPage(page.number)">Next</button>-->

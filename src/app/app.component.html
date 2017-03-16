@@ -1,0 +1,10 @@
+<h1>{{title}}</h1>
+ <nav>
+   <a [routerLink]="['/activityList']">Activities</a>
+   <a [routerLink]="['/calendar']">Calendar</a>
+   <a [routerLink]="['/records']">Records</a>
+   <a [routerLink]="['/statistics']">Statistics</a>
+ </nav>
+ <div id="content">
+     <router-outlet></router-outlet>
+ </div>

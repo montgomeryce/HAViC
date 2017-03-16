@@ -1,0 +1,12 @@
+.trainingDataTable tbody tr:hover{
+    color: #607D8B;
+    background-color: #DDD;
+}
+
+button {
+    background:none!important;
+    border:none;
+    padding:0!important;
+    font: inherit;
+    cursor: pointer;
+}

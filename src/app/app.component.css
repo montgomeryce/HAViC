@@ -1,0 +1,48 @@
+h1 {
+    font-size: 1.2em;
+    color: #999;
+    margin-bottom: 0;
+}
+
+h2 {
+    font-size: 2em;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+#content {
+    margin-left: 95px;
+    padding: 4px 4px;
+    border-style: solid;
+    border-color: #eee;
+    border-radius: 4px;
+}
+
+nav {
+    float: left;
+    width: 90px;
+}
+
+nav a {
+    padding: 4px 4px;
+    text-decoration: none;
+    margin-top: 2px;
+    display: flex;
+    horiz-align: center;
+    background-color: #eee;
+    border-radius: 4px;
+
+}
+
+nav a:visited, a:link {
+    color: #607D8B;
+}
+
+nav a:hover {
+    color: #039be5;
+    background-color: #CFD8DC;
+}
+
+nav a.router-link-active {
+    color: #039be5;
+}
