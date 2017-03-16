@@ -1,0 +1,64 @@
+<!-- <activity-header [activity]="activity"></activity-header> -->
+<table class="activityDataTable">
+    <thead>
+    <tr>
+        <td title="Polling Index">Number</td>
+        <!-- <td title="Calories in KCal" >Calories</td>
+        <td title="Altitude in feet">Altitude</td>
+        <td title="Altitude change in feet" >Alt Change (ft)</td>
+        <td title="Cadence rotations per minute">Cadence</td>
+        <td title="Absolute Distance in miles" >Total Dist (mi)</td>
+        <td title="Distance in feet" >Dist (ft)</td>
+        <td title="Distance change in feet" >Dist Change (ft)</td>
+        <td title="bpm" >HeartRate</td>
+        <td title="" >IntensityZone</td>
+        <td title="" >Rotations</td>
+        <td title="meters per second?" >Speed</td>
+        <td title="" >SpeedTime</td>
+        <td title="" >TargetZone</td>
+        <td title="Temperature in Fahrenheit">Temp </td>
+        <td title="Training Time in seconds" >TT</td>
+        <td title="Absolute Training Time in minutes (with fractional seconds)" >TTAbs</td>
+        <td title="Training Time Uphill or Downhill in seconds" >TT Up/Down</td> -->
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let datum of activityData">
+        <td>{{datum.number}}</td>
+        <!-- <td>{{datum.calories | number:'.2-2'}}</td>
+        <td>{{datum.altitude}}</td>
+        <td>
+            <p *ngIf="datum.altitudeDiffDownhill > 0"><i class="fa fa-arrow-down" aria-hidden="true"></i> {{datum.altitudeDiffDownhill}}</p>
+            <p *ngIf="datum.altitudeDiffUphill > 0"><i class="fa fa-arrow-up" aria-hidden="true"></i>  {{datum.altitudeDiffUphill}}</p>
+            <p *ngIf="datum.altitudeDiffDownhill == 0 && datum.altitudeDiffUphill == 0"> - </p>
+        </td>
+        <td>{{datum.cadence}}</td>
+        <td>{{datum.distanceAbsolute | metersToMiles | number:'.2-2'}}</td>
+        <td>{{datum.distance | metersToFeet | number:'.2-2'}}</td>
+        <td>
+            <p *ngIf="datum.distanceDownhill > 0"><i class="fa fa-arrow-down" aria-hidden="true"></i>{{datum.distanceDownhill | metersToFeet | number:'.2-2'}}</p>
+            <p *ngIf="datum.distanceUphill > 0"><i class="fa fa-arrow-up" aria-hidden="true"></i> {{datum.distanceUphill | metersToFeet | number:'.2-2'}}</p>
+            <p *ngIf="datum.distanceDownhill == 0 && datum.distanceUphill == 0"> - </p>
+        </td>
+        <td>{{datum.heartrate}}</td>
+        <td>{{datum.intensityZone}}</td>
+        <td>{{datum.rotations}}</td>
+        <td>{{datum.speed | number:'.2-2'}} </td>
+
+        <td>{{datum.speedTime}}</td>
+        <td>{{datum.targetZone}}</td>
+        <!--td>{{datum.temperature | celsiusToFahrenheit}}</td-->
+        <!-- <td>{{datum.temperature}}</td>
+        <td>{{datum.trainingTime}}</td> -->
+        <!-- <td>{{datum.trainingTimeAbsolute | secondsToMinutes}}</td> -->
+        <!-- <td>{{datum.trainingTimeAbsolute}}</td>
+
+        <td>
+            <p *ngIf="datum.trainingTimeDownhill > 0"><i class="fa fa-arrow-down" aria-hidden="true"></i> {{datum.trainingTimeDownhill}}</p>
+            <p *ngIf="datum.trainingTimeUphill > 0"><i class="fa fa-arrow-up" aria-hidden="true"></i>  {{datum.trainingTimeUphill}}</p>
+            <p *ngIf="datum.trainingTimeDownhill == 0 && datum.trainingTimeUphill == 0"> - </p>
+        </td> -->
+
+    </tr>
+    </tbody>
+</table>

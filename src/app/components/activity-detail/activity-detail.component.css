@@ -1,0 +1,14 @@
+.recordList {
+	margin: 0 0 2em 0;
+	list-style-type: none;
+	padding: 0;
+	width: 15em;
+}
+.recordList .text {
+	position: relative;
+	top: -3px;
+}
+.activityDataTable tbody tr:hover{
+	color: #607D8B;
+	background-color: #DDD;
+}
