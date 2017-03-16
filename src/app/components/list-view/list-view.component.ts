@@ -2,14 +2,12 @@ import {Component, OnInit} from '@angular/core';
 import {ActivityService}         from '../../services/activity.service';
 import {Activity} from "../../models/activity";
 import {Router} from "@angular/router";
-// import {MetersToMilesPipe} from "../../pipes/meters-to-miles.pipe";
 import {Page} from "./page";
 
 @Component({
   selector: 'app-list-view',
   templateUrl: './list-view.component.html',
   styleUrls: ['./list-view.component.css']
-      // pipes: [MetersToMilesPipe]
 })
 export class ListViewComponent implements OnInit {
     error:any;
@@ -36,7 +34,7 @@ export class ListViewComponent implements OnInit {
     ngOnInit() {
         this.getListData(this.pageSize,0);
     }
-    
+
     nextPage(page:number){
         this.getListData(this.pageSize,page+1);
     }

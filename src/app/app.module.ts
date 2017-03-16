@@ -14,6 +14,7 @@ import { LineChartViewComponent } from './components/line-chart-view/line-chart-
 import { RecordsViewComponent } from './components/records-view/records-view.component';
 import { StatisticsViewComponent } from './components/statistics-view/statistics-view.component';
 import {ActivityService} from './services/activity.service';
+import { MetersToMilesPipe } from './pipes/meters-to-miles.pipe';
 
 @NgModule({
   imports: [
@@ -40,7 +41,8 @@ import {ActivityService} from './services/activity.service';
     LineChartComponent,
     LineChartViewComponent,
     RecordsViewComponent,
-    StatisticsViewComponent
+    StatisticsViewComponent,
+    MetersToMilesPipe
   ],
   providers: [
     ActivityService
