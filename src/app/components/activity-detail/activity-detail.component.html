@@ -3,7 +3,7 @@
     <thead>
     <tr>
         <td title="Polling Index">Number</td>
-        <!-- <td title="Calories in KCal" >Calories</td>
+        <td title="Calories in KCal" >Calories</td>
         <td title="Altitude in feet">Altitude</td>
         <td title="Altitude change in feet" >Alt Change (ft)</td>
         <td title="Cadence rotations per minute">Cadence</td>
@@ -19,13 +19,13 @@
         <td title="Temperature in Fahrenheit">Temp </td>
         <td title="Training Time in seconds" >TT</td>
         <td title="Absolute Training Time in minutes (with fractional seconds)" >TTAbs</td>
-        <td title="Training Time Uphill or Downhill in seconds" >TT Up/Down</td> -->
+        <td title="Training Time Uphill or Downhill in seconds" >TT Up/Down</td>
     </tr>
     </thead>
     <tbody>
     <tr *ngFor="let datum of activityData">
         <td>{{datum.number}}</td>
-        <!-- <td>{{datum.calories | number:'.2-2'}}</td>
+        <td>{{datum.calories | number:'.2-2'}}</td>
         <td>{{datum.altitude}}</td>
         <td>
             <p *ngIf="datum.altitudeDiffDownhill > 0"><i class="fa fa-arrow-down" aria-hidden="true"></i> {{datum.altitudeDiffDownhill}}</p>
@@ -48,16 +48,14 @@
         <td>{{datum.speedTime}}</td>
         <td>{{datum.targetZone}}</td>
         <!--td>{{datum.temperature | celsiusToFahrenheit}}</td-->
-        <!-- <td>{{datum.temperature}}</td>
-        <td>{{datum.trainingTime}}</td> -->
-        <!-- <td>{{datum.trainingTimeAbsolute | secondsToMinutes}}</td> -->
-        <!-- <td>{{datum.trainingTimeAbsolute}}</td>
-
+        <td>{{datum.temperature}}</td>
+        <td>{{datum.trainingTime}}</td>
+        <td>{{datum.trainingTimeAbsolute | secondsToMinutes}}</td>
         <td>
             <p *ngIf="datum.trainingTimeDownhill > 0"><i class="fa fa-arrow-down" aria-hidden="true"></i> {{datum.trainingTimeDownhill}}</p>
             <p *ngIf="datum.trainingTimeUphill > 0"><i class="fa fa-arrow-up" aria-hidden="true"></i>  {{datum.trainingTimeUphill}}</p>
             <p *ngIf="datum.trainingTimeDownhill == 0 && datum.trainingTimeUphill == 0"> - </p>
-        </td> -->
+        </td>
 
     </tr>
     </tbody>

@@ -15,6 +15,8 @@ import { RecordsViewComponent } from './components/records-view/records-view.com
 import { StatisticsViewComponent } from './components/statistics-view/statistics-view.component';
 import {ActivityService} from './services/activity.service';
 import { MetersToMilesPipe } from './pipes/meters-to-miles.pipe';
+import { SecondsToMinutesPipe } from './pipes/seconds-to-minutes.pipe';
+import { MetersToFeetPipe } from './pipes/meters-to-feet.pipe';
 
 @NgModule({
   imports: [
@@ -42,7 +44,9 @@ import { MetersToMilesPipe } from './pipes/meters-to-miles.pipe';
     LineChartViewComponent,
     RecordsViewComponent,
     StatisticsViewComponent,
-    MetersToMilesPipe
+    MetersToMilesPipe,
+    SecondsToMinutesPipe,
+    MetersToFeetPipe
   ],
   providers: [
     ActivityService
