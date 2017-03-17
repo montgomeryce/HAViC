@@ -17,9 +17,9 @@
         <td>{{activity.date}}</td>
         <td>{{activity.name}}</td>
         <td>{{activity.type}}</td>
-        <td>{{activity.totalTime }}</td>
-        <td>{{activity.totalDistance | metersToMiles| number:'.0-2'}}</td>
-        <td>{{activity.totalCalories | number:'.0-0'}}</td>
+        <td class="tbl-right">{{activity.totalTime }}</td>
+        <td class="tbl-right">{{activity.totalDistance | metersToMiles| number:'.0-2'}}</td>
+        <td class="tbl-right">{{activity.totalCalories | number:'.0-0'}}</td>
         <td><i class="fa fa-table" aria-hidden="true" (click)="onSelect(activity.id)"></i></td>
         <td><i class="fa fa-line-chart" aria-hidden="true" (click)="onSelectLine(activity.id)"></i>
         </td>
