@@ -8,7 +8,7 @@
 	position: relative;
 	top: -3px;
 }
-.activityDataTable tbody tr:hover{
-	color: #607D8B;
-	background-color: #DDD;
+
+.havcTable tbody {
+    text-align: right;
 }
