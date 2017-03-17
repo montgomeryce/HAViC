@@ -61,7 +61,7 @@ export class LineChartViewComponent implements OnInit, OnDestroy  {
                 }else {*/
 
                 if (this.items.indexOf("Speed") > -1) {
-                    let speed = new LineChartConfig('Speed','', 'orange',this.d3interpolation,'Line');
+                    let speed = new LineChartConfig('Speed','rgba(255, 255, 255, .1)', 'orange',this.d3interpolation,'Line');
 
                     speed.dataset = this.activityData.map(data => {
                         return {x: data.number, y: data.speed};
@@ -69,7 +69,7 @@ export class LineChartViewComponent implements OnInit, OnDestroy  {
                     this.tdLineChartConfig.push(speed);
                 }
                 if (this.items.indexOf("HeartRate") > -1) {
-                    let hr = new LineChartConfig('HeartRate','', 'red',this.d3interpolation,'Line');
+                    let hr = new LineChartConfig('HeartRate','rgba(255, 255, 255, .1)', 'red',this.d3interpolation,'Line');
 
                     hr.dataset = this.activityData.map(data => {
                         return {x: data.number, y: data.heartRate};
@@ -77,7 +77,7 @@ export class LineChartViewComponent implements OnInit, OnDestroy  {
                     this.tdLineChartConfig.push(hr);
                 }
                 if (this.items.indexOf("Temperature") > -1) {
-                    let temp = new LineChartConfig('Temperature','', 'green',this.d3interpolation,'Line');
+                    let temp = new LineChartConfig('Temperature','rgba(255, 255, 255, .1)', 'green',this.d3interpolation,'Line');
 
                     temp.dataset = this.activityData.map(data => {
                         return {x: data.number, y: data.temperature};
