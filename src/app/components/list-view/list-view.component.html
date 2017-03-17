@@ -6,7 +6,7 @@
         <td>Name</td>
         <td>ActivityType</td>
         <td title="Total time in ?">Time</td>
-        <td title="Total distance in miles">Distance</td>
+        <td title="Total distance in miles">Distance (mi)</td>
         <td title="Total calories">Calories</td>
         <td></td>
         <td></td>
@@ -21,9 +21,8 @@
         <td>{{activity.totalDistance | metersToMiles| number:'.0-2'}}</td>
         <td>{{activity.totalDistance | number:'.0-2'}}</td>
         <td>{{activity.totalCalories | number:'.0-0'}}</td>
-        <td><button (click)="onSelect(activity.id)">Table</button></td>
-        <td>
-            <button (click)="onSelectLine(activity.id)">Chart</button>
+        <td><i class="fa fa-table" aria-hidden="true" (click)="onSelect(activity.id)"></i></td>
+        <td><i class="fa fa-line-chart" aria-hidden="true" (click)="onSelectLine(activity.id)"></i>
         </td>
     </tr>
     </tbody>
