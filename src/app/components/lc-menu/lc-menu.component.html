@@ -1,0 +1,14 @@
+<div id="chartMenu" style="float:right;"><i class="fa fa-gear" aria-hidden="true"></i>
+
+    <div>Lines
+        <div><input type="checkbox" (change)="toggleSpeed()" value="Speed" checked />Speed</div>
+        <div><input type="checkbox" (change)="toggleHeartRate()" value="HeartRate" checked />Heart Rate</div>
+        <div><input type="checkbox" (change)="toggleTemperature()" value="Temperature" checked />Temperature</div>
+        <div><input type="checkbox" (change)="toggleAltitude()" value="Altitude" checked />Altitude</div>
+    </div>
+    <div>Interpolation
+        <div><select style="float: right" [(ngModel)]="d3interpolation" (change)="changeInterpolation()">
+            <option *ngFor="let iv of interpolationValues" [value]="iv.value">{{iv.value}}</option>
+        </select></div>
+    </div>
+</div>

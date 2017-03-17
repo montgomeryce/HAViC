@@ -17,6 +17,7 @@ import {ActivityService} from './services/activity.service';
 import { MetersToMilesPipe } from './pipes/meters-to-miles.pipe';
 import { SecondsToMinutesPipe } from './pipes/seconds-to-minutes.pipe';
 import { MetersToFeetPipe } from './pipes/meters-to-feet.pipe';
+import { LcMenuComponent } from './components/lc-menu/lc-menu.component';
 
 @NgModule({
   imports: [
@@ -46,7 +47,8 @@ import { MetersToFeetPipe } from './pipes/meters-to-feet.pipe';
     StatisticsViewComponent,
     MetersToMilesPipe,
     SecondsToMinutesPipe,
-    MetersToFeetPipe
+    MetersToFeetPipe,
+    LcMenuComponent
   ],
   providers: [
     ActivityService
