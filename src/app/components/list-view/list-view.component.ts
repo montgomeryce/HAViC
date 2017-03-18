@@ -13,6 +13,7 @@ export class ListViewComponent implements OnInit {
     error:any;
     activities:Activity[];
     pageSize = 10;
+    loading = true;
     page: Page;
     constructor(
         private activityService:ActivityService,
@@ -23,10 +24,12 @@ export class ListViewComponent implements OnInit {
 
     getListData(pageSize:number, page:number) {
         console.log('********* getListData **********');
+        this.loading = true;
         this.activityService.getActivities('date','desc',pageSize,page).then(
             data => {
                 this.activities = data._embedded.activities;
                 this.page = data.page;
+                this.loading = false;
             }
         );
     }

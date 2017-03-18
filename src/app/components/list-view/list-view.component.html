@@ -1,4 +1,6 @@
 <h2>My Activities </h2>
+<app-loading *ngIf="loading==true" ></app-loading>
+<div *ngIf="loading==false">
 <table class="havcTable">
     <thead>
     <tr>
@@ -28,5 +30,6 @@
 </table>
 <button (click)="prevPage(page.number)">Prev</button>
 <button (click)="nextPage(page.number)">Next</button>
+<div>
 <!--
 <button *ngIf="page.totalPages>1 && page.number < page.totalPages" (click)="nextPage(page.number)">Next</button>-->
