@@ -21,6 +21,7 @@ export class ActivityDetailComponent implements OnInit {
   private activity:Activity;
   private activityData:ActivityData[];
   private sub: any;
+  loading = true;
 
   constructor(
     private activityService:ActivityService,
@@ -44,6 +45,7 @@ export class ActivityDetailComponent implements OnInit {
         this.activityService.getActivityData(id).then(data => {
             console.log('activityData', data);
             this.activityData = data;
+            this.loading = false;
         });
     });
   }

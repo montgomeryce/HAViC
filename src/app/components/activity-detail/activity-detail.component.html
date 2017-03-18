@@ -1,5 +1,6 @@
 <app-activity-header [activity]="activity"></app-activity-header>
-<table class="havcTable">
+<app-loading *ngIf="loading==true" ></app-loading>
+<table *ngIf="loading==false" class="havcTable">
     <thead>
     <tr>
         <td title="Polling Index">Number</td>
@@ -28,17 +29,17 @@
         <td>{{datum.calories | number:'.2-2'}}</td>
         <td>{{datum.altitude}}</td>
         <td>
-            <p *ngIf="datum.altitudeDiffDownhill > 0"><i class="fa fa-arrow-down" aria-hidden="true"></i> {{datum.altitudeDiffDownhill}}</p>
-            <p *ngIf="datum.altitudeDiffUphill > 0"><i class="fa fa-arrow-up" aria-hidden="true"></i>  {{datum.altitudeDiffUphill}}</p>
-            <p *ngIf="datum.altitudeDiffDownhill == 0 && datum.altitudeDiffUphill == 0"> - </p>
+            <span *ngIf="datum.altitudeDiffDownhill > 0"><i class="fa fa-arrow-down" aria-hidden="true"></i> {{datum.altitudeDiffDownhill}}</span>
+            <span *ngIf="datum.altitudeDiffUphill > 0"><i class="fa fa-arrow-up" aria-hidden="true"></i>  {{datum.altitudeDiffUphill}}</span>
+            <span *ngIf="datum.altitudeDiffDownhill == 0 && datum.altitudeDiffUphill == 0"> - </span>
         </td>
         <td>{{datum.cadence}}</td>
         <td>{{datum.distanceAbsolute | metersToMiles | number:'.2-2'}}</td>
         <td>{{datum.distance | metersToFeet | number:'.2-2'}}</td>
         <td>
-            <p *ngIf="datum.distanceDownhill > 0"><i class="fa fa-arrow-down" aria-hidden="true"></i>{{datum.distanceDownhill | metersToFeet | number:'.2-2'}}</p>
-            <p *ngIf="datum.distanceUphill > 0"><i class="fa fa-arrow-up" aria-hidden="true"></i> {{datum.distanceUphill | metersToFeet | number:'.2-2'}}</p>
-            <p *ngIf="datum.distanceDownhill == 0 && datum.distanceUphill == 0"> - </p>
+            <span *ngIf="datum.distanceDownhill > 0"><i class="fa fa-arrow-down" aria-hidden="true"></i>{{datum.distanceDownhill | metersToFeet | number:'.2-2'}}</span>
+            <span *ngIf="datum.distanceUphill > 0"><i class="fa fa-arrow-up" aria-hidden="true"></i> {{datum.distanceUphill | metersToFeet | number:'.2-2'}}</span>
+            <span *ngIf="datum.distanceDownhill == 0 && datum.distanceUphill == 0"> - </span>
         </td>
         <td>{{datum.heartrate}}</td>
         <td>{{datum.intensityZone}}</td>
@@ -52,9 +53,9 @@
         <td>{{datum.trainingTime}}</td>
         <td>{{datum.trainingTimeAbsolute | secondsToMinutes}}</td>
         <td>
-            <p *ngIf="datum.trainingTimeDownhill > 0"><i class="fa fa-arrow-down" aria-hidden="true"></i> {{datum.trainingTimeDownhill}}</p>
-            <p *ngIf="datum.trainingTimeUphill > 0"><i class="fa fa-arrow-up" aria-hidden="true"></i>  {{datum.trainingTimeUphill}}</p>
-            <p *ngIf="datum.trainingTimeDownhill == 0 && datum.trainingTimeUphill == 0"> - </p>
+            <span *ngIf="datum.trainingTimeDownhill > 0"><i class="fa fa-arrow-down" aria-hidden="true"></i> {{datum.trainingTimeDownhill}}</span>
+            <span *ngIf="datum.trainingTimeUphill > 0"><i class="fa fa-arrow-up" aria-hidden="true"></i>  {{datum.trainingTimeUphill}}</span>
+            <span *ngIf="datum.trainingTimeDownhill == 0 && datum.trainingTimeUphill == 0"> - </span>
         </td>
 
     </tr>
