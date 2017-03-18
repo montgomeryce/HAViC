@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivityService}         from '../../services/activity.service';
+import {Activity} from "../../models/activity";
 
 @Component({
   selector: 'app-records-view',
@@ -6,10 +8,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./records-view.component.css']
 })
 export class RecordsViewComponent implements OnInit {
+    calBurnActs:Activity[];
+    longestActs:Activity[];
 
-  constructor() { }
+    constructor(private activityService:ActivityService) {
 
-  ngOnInit() {
-  }
+    }
 
+    getData() {
+        this.activityService.getActivities('totalCalories','desc',6).then(
+            data => this.calBurnActs = data
+        );
+        this.activityService.getActivities('totalDistance','desc',6).then(
+            data => this.longestActs = data
+        );
+    }
+
+    ngOnInit() {
+        this.getData();
+    }
 }
