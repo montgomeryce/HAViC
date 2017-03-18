@@ -18,6 +18,7 @@ import { MetersToMilesPipe } from './pipes/meters-to-miles.pipe';
 import { SecondsToMinutesPipe } from './pipes/seconds-to-minutes.pipe';
 import { MetersToFeetPipe } from './pipes/meters-to-feet.pipe';
 import { LcMenuComponent } from './components/lc-menu/lc-menu.component';
+import { LoadingComponent } from './components/loading/loading.component';
 
 @NgModule({
   imports: [
@@ -48,7 +49,8 @@ import { LcMenuComponent } from './components/lc-menu/lc-menu.component';
     MetersToMilesPipe,
     SecondsToMinutesPipe,
     MetersToFeetPipe,
-    LcMenuComponent
+    LcMenuComponent,
+    LoadingComponent
   ],
   providers: [
     ActivityService
