@@ -1,10 +1,13 @@
+
+<header>
 <h1>{{title}}</h1>
+</header>
  <nav>
    <a [routerLink]="['/activityList']">Activities</a>
    <a [routerLink]="['/calendar']">Calendar</a>
    <a [routerLink]="['/records']">Records</a>
    <a [routerLink]="['/statistics']">Statistics</a>
  </nav>
- <div id="content">
+ <article id="content">
      <router-outlet></router-outlet>
- </div>
+ </article>
