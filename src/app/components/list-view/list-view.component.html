@@ -22,8 +22,8 @@
         <td class="havcTable-right">{{activity.totalTime }}</td>
         <td class="havcTable-right">{{activity.totalDistance | metersToMiles| number:'.0-2'}}</td>
         <td class="havcTable-right">{{activity.totalCalories | number:'.0-0'}}</td>
-        <td><i class="fa fa-table" aria-hidden="true" (click)="onSelect(activity.id)"></i></td>
-        <td><i class="fa fa-line-chart" aria-hidden="true" (click)="onSelectLine(activity.id)"></i>
+        <td><i title="View activity details" class="fa fa-table" aria-hidden="true" (click)="onSelect(activity.id)"></i></td>
+        <td><i title="View activity chart" class="fa fa-line-chart" aria-hidden="true" (click)="onSelectLine(activity.id)"></i>
         </td>
     </tr>
     </tbody>
